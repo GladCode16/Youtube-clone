@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f0f0f0;
+    position: relative;
+    overflow-x: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+::-moz-selection { /* Code for Firefox */
+    appearance: none;
+  }
+  
+  ::selection {
+      appearance: none;
+  }
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+/* Primary Navbar */
+#PrimaryNavbar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+#PrimaryNavbar ul{
+    display: flex;
+    align-items: center;
+}
+#PrimaryNavbar ul li:nth-child(1){
+    margin: 18px 28px;
+    cursor: pointer;
+}
+#PrimaryNavbar ul li:nth-child(1) img{
+    width: 17px;
+}
+#PrimaryNavbar ul li:nth-child(2) img{
+    width: 115px;
+    cursor: pointer;
+
+}
+#PrimaryNavbar ul li{
+    list-style: none;
+}
+
+#search-box{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    position: relative;
+    left: 14%;
+}
+#search-box input[type="search"]{
+    padding: 10px;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, .15);
+    text-justify: center;
+    font-size: 16px;
+    border-right: none;
+    outline: none;
+}
+#search-box input::-webkit-input-placeholder,
+#search-box input::-moz-placeholder{
+    font-size: 16px;
+}
+#search-box input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    width: 6.5px;
+    height: 6.5px;
+    background: url("./images/cancel button.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(2);
+    filter: invert(0.3);
+}
+
+#search-img{
+    background-color: #f8f8f8;
+    width: 10%;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, .15);
+    cursor: pointer;
+}
+#search-img:hover{
+    background: #d3d3d3;
+}
+#search-img img{
+    width: 30%;
+}
+
+#mic-img{
+    background-color: #f8f8f8;
+    width: 45px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#mic-img img{
+    width: 25%;
+}
+
+#other-opts{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    align-items: center;
+    justify-content: right;
+}
+#other-opts span{
+    cursor: pointer;
+}
+#other-opts span:not(:last-child){
+    margin-right: 30px ;
+}
+#other-opts span:last-child img{
+    border-radius: 50%;
+    width: 35px;
+}
+#other-opts span img{
+    width: 25px;
+}
+/* Primary Navbar */
+
+/* Category section */
+#SecondaryNavbar{
+    width: 86%;
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 54px;
+    background-color: white;
+    z-index: 1;
+}
+#SecondaryNavbar ul{
+    display: -webkit-inline-box;
+    overflow:hidden;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+#SecondaryNavbar ul::-webkit-scrollbar{
+    appearance: none;
+}
+#SecondaryNavbar ul li{
+    list-style: none;
+    padding:5px 10px;
+    background: #0000000d;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+    margin: 10px 20px 10px 0;
+}
+#SecondaryNavbar ul li:first-child{
+    margin-left: 10px;
+}
+#SecondaryNavbar ul li:hover{
+    background: rgba(0, 0, 0, .1);
+}
+#SecondaryNavbar ul li a{
+    font-family: sans-serif;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    font-size: 14px;
+}
+.active{
+    background: black !important;
+    color: white !important;
+}
+
+.split{
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+/* Category section */
+
+
+
+/* MainMenu section */
+#MainMenu{
+    width: 14%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 100vh;
+    top: 54px;
+}
+#MainMenu ul{
+    width: 100%;
+    margin-top: 5px;
+}
+#MainMenu ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0;
+    cursor: pointer;
+}
+#MainMenu ul li:hover{
+    background:rgba(0, 0, 0, .1);
+}
+#MainMenu ul li img{
+    width: 25px;
+    margin: 0 20px;
+}
+.from-youtube{
+    width: 17px !important;
+}
+#MainMenu ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.home_active{
+    background:rgba(0, 0, 0, .1);
+}
+/* MainMenu section */
+
+/* Videos section */
+#Videos-container{
+    margin-top: 110px;
+    margin-left: 235px;
+    width: calc(100% - 250px);
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+    
+    
+}
+.thumb-images{
+    min-height: 270px;
+    height: auto;
+    width: 290px;
+    position: relative;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}
+.thumb-images:nth-child(1):nth-child(2):nth-child(3):nth-child(4){
+    margin-top: 0 !important;
+}
+.thumbnail{
+    width: 300px;
+    height: 180px;
+}
+#img-title{
+    display: flex;
+    align-items: center;
+}
+.channel-logo{
+    width: 40px;
+    height: 40px;
+    margin-top:10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.title{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.channel-details{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #6e6e6e;
+    font-weight: 600;
+}
+.details span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #6e6e6e;
+    font-weight: 600;
+}
+.channel-name:hover{
+    color: #3d3d3d;
+}
